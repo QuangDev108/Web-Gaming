@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang nhap - TechCore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body class="login-page">
+
+<!-- Login Header -->
+<header class="login-header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span class="logo-text">TechCore</span>
+            </a>
+            <a href="index.html" class="btn-back">&#8592; Ve trang chu</a>
+        </div>
+    </div>
+</header>
+
+<!-- Login Main -->
+<main class="login-main">
+    <!-- Brand Side -->
+    <div class="login-brand">
+        <div class="login-brand-inner">
+            <h1>TechCore</h1>
+            <p class="tagline">May tinh hieu suat cao cho moi nhu cau</p>
+            <p class="desc">Kham pha hang nghin san pham may tinh, linh kien va phu kien chinh hang. Giao hang nhanh — Bao hanh chu dao — Gia canh tranh.</p>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">100%</div>
+                    <span class="feature-text">Hang chinh hang 100%, co tem bao hanh</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">Free</div>
+                    <span class="feature-text">Mien phi van chuyen don hang tren 5 trieu</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">0%</div>
+                    <span class="feature-text">Tra gop 0% lai suat, toi da 24 thang</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">24/7</div>
+                    <span class="feature-text">Ho tro ky thuat 24/7, bao hanh tan noi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Side -->
+    <div class="login-form-area">
+        <div class="login-form-box">
+            <h2>Dang nhap</h2>
+            <p class="subtitle">Chao mung ban quay tro lai TechCore!</p>
+
+            <div id="alertBox" class="alert"></div>
+
+            <div class="form-group">
+                <label>Ten dang nhap <span>*</span></label>
+                <input type="text" id="username" class="form-input" placeholder="Nhap ten dang nhap" autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label>Mat khau <span>*</span></label>
+                <input type="password" id="password" class="form-input" placeholder="Nhap mat khau" autocomplete="current-password">
+            </div>
+
+            <button class="btn-submit" id="btnSubmit" onclick="handleLogin()">
+                Dang nhap
+            </button>
+
+            <div class="demo-box" onclick="fillDemo('admin')">
+                <h4>// TAI KHOAN DEMO</h4>
+                <p>Admin: <code>admin</code> / <code>admin123</code></p>
+                <p>User: &nbsp;<code>user</code> / <code>user123</code></p>
+                <p class="hint">Click de dien tu dong</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="./JS/login.js"></script>
+</body>
+</html>

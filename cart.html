@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gio hang - TechCore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header scrolled" id="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-mark">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
+                </svg>
+            </div>
+            <span class="logo-text">TechCore</span>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+            <a href="index.html#products" class="nav-link">Sản phẩm</a>
+            <a href="index.html#category" class="nav-link">Danh mục</a>
+            <a href="index.html#contact" class="nav-link">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+            <a href="cart.html" class="cart-btn" style="border-color: var(--accent);" title="Giỏ hàng">
+                <svg class="cart-icon-svg" viewBox="0 0 24 24">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+            <button class="btn-login" onclick="window.location.href='login.html'">Dang nhap</button>
+        </div>
+    </div>
+</header>
+
+<!-- Cart Section -->
+<section class="cart-page-section">
+    <div class="container">
+        <div class="section-tag">// GIO HANG</div>
+        <h1 class="page-title">Gio hang cua ban</h1>
+        <p class="page-subtitle">Ban co <span id="totalItems">0</span> san pham trong gio hang</p>
+
+        <div class="cart-layout" id="cartLayout">
+            <!-- Cart Items -->
+            <div>
+                <div class="cart-items-box" id="cartItemsBox">
+                    <div class="cart-items-header">// DANH SACH SAN PHAM</div>
+                    <div id="cartItemsList"></div>
+                    <div class="cart-footer-actions">
+                        <a href="index.html" class="btn-continue">&#8592; Tiep tuc mua sam</a>
+                        <button class="btn-clear" onclick="clearCart()">Xoa tat ca</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary-box">
+                <h3>Tom tat don hang</h3>
+                <div class="summary-row">
+                    <span>Tam tinh</span>
+                    <span id="subtotal">0d</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phi van chuyen</span>
+                    <span id="shipping">30.000d</span>
+                </div>
+                <div class="summary-row">
+                    <span>Giam gia</span>
+                    <span style="color: var(--success)">-0d</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Tong cong</span>
+                    <span id="totalPrice">0d</span>
+                </div>
+
+                <button class="btn-checkout-main" onclick="checkout()">
+                    Thanh toan ngay
+                </button>
+
+                <p class="payment-label">Chap nhan thanh toan</p>
+                <div class="payment-icons-row">
+                    <span>VISA</span>
+                    <span>Mastercard</span>
+                    <span>COD</span>
+                    <span>MoMo</span>
+                    <span>VNPay</span>
+                </div>
+
+                <div class="trust-grid" style="margin-top:20px;">
+                    <div class="trust-item">
+                        <span class="trust-icon-label">SSL</span>
+                        <span>Bao mat thanh toan</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon-label">Fast</span>
+                        <span>Giao hang nhanh</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon-label">7D</span>
+                        <span>Doi tra 7 ngay</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" style="margin-bottom:16px; display:inline-flex;">
+                    <div class="logo-mark">
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">TechCore</span>
+                </a>
+                <p>Dia chi may tinh tin cay cua nguoi Viet. Chuyen cung cap PC, laptop va linh kien may tinh chinh hang tu 2015.</p>
+                <div class="footer-social">
+                    <a href="#">Facebook</a>
+                    <a href="#">Zalo</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>San pham</h4>
+                <a href="index.html#category">PC Gaming</a>
+                <a href="index.html#category">Laptop</a>
+                <a href="index.html#category">Workstation</a>
+                <a href="index.html#category">Linh kien</a>
+            </div>
+            <div class="footer-links">
+                <h4>Ho tro</h4>
+                <a href="#">Chinh sach bao hanh</a>
+                <a href="#">Huong dan mua hang</a>
+                <a href="#">Chinh sach doi tra</a>
+                <a href="#">Tra cuu don hang</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Lien he</h4>
+                <p>Email: support@techcore.vn</p>
+                <p>Hotline: 1800 6868</p>
+                <p>123 Nguyen Van Linh, Q7, TP.HCM</p>
+                <p>08:00 – 22:00 (Tat ca cac ngay)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TechCore. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="./JS/cart.js"></script>
+</body>
+</html>
