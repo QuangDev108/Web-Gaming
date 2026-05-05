@@ -128,7 +128,7 @@
                 <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('workstation')">
-                <div class="cat-label-icon">WS</div>
+                <div class="cat-label-icon"><img src="./assets/images/Workstation_HPZ6G5_DualXeon.jpg" alt=""></div>
                 <div class="cat-info">
                     <h3>Workstation</h3>
                     <p>Đồ họa, render, AI chuyên nghiệp</p>
@@ -172,15 +172,16 @@
     <div class="container">
         <div class="filter-bar">
             <div class="search-group">
-                <span class="search-icon">SRC</span>
-                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." oninput="filterAndRender()">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." onkeydown="if(event.key==='Enter') doSearch()">
             </div>
             <select id="sortSelect" onchange="filterAndRender()">
                 <option value="mac-dinh">Mặc định</option>
                 <option value="tu-thap-den-cao">Giá: Thấp đến Cao</option>
                 <option value="tu-cao-den-thap">Giá: Cao đến Thấp</option>
             </select>
-            <button class="btn-reset" onclick="resetFilter()">Đặt lại</button> // chinh thanh nut tim kiem
+            <button class="btn-search" onclick="doSearch()"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+            <button class="btn-reset" onclick="resetFilter()">Đặt lại</button>
         </div>
     </div>
 </section>

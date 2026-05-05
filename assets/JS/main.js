@@ -1,21 +1,21 @@
 // ====== PRODUCT DATA ======
 const products = [
-    { id: 1,  name: "PC Gaming Beast i9 RTX 4090",          category: "gaming",      price: 89000000,  oldPrice: 99000000,  badge: "HOT",  specs: "i9-14900K | RTX 4090 | 64GB RAM | 2TB SSD",      catLabel: "PC",             img: "../images/pc_gaming_beast_i9_rtx_4090.jpg" },
-    { id: 2,  name: "Laptop ASUS ROG Zephyrus G16",          category: "gaming",      price: 52000000,  oldPrice: 58000000,  badge: "SALE", specs: "Ryzen 9 | RTX 4070 | 32GB | 1TB",                  catLabel: "Laptop",             img: "../images/Laptop_ASUS_ROG_Zephyrus_G16.webp" },
-    { id: 3,  name: "Workstation Dell Precision 7680",        category: "workstation", price: 120000000, oldPrice: null,      badge: "NEW",  specs: "Xeon W | RTX A4000 | 128GB ECC | 4TB",             catLabel: "WS",             img: "../images/workstation_dell_precision_7680.jpg" },
-    { id: 4,  name: "MacBook Pro M3 Max 16",               category: "laptop",      price: 99000000,  oldPrice: 105000000, badge: "SALE", specs: "M3 Max | 48GB | 1TB SSD | Liquid Retina XDR",      catLabel: "Laptop",             img: "../images/MacBook Pro_M3_Max_16.jpeg" },
-    { id: 5,  name: "PC Văn phòng Core i5 Gen 13",           category: "van-phong",   price: 18500000,  oldPrice: null,      badge: null,   specs: "i5-13400 | UHD 730 | 16GB | 512GB SSD",            catLabel: "PC",             img: "../images/pcvan-phong-i3.jpg" },
-    { id: 6,  name: "Intel Core i9-14900K Processor",         category: "linh-kien",   price: 13500000,  oldPrice: 15000000,  badge: "SALE", specs: "24 nhân 32 luồng | 6.0GHz Turbo | LGA1700",        catLabel: "CPU",             img: "../images/Intel_Core i9-14900K_Processor.jpg" },
-    { id: 7,  name: "NVIDIA RTX 4080 Super 16GB",             category: "linh-kien",   price: 28000000,  oldPrice: null,      badge: "NEW",  specs: "16GB GDDR6X | DLSS 3 | Ray Tracing",               catLabel: "GPU",             img: "../images/NVIDIA RTX 4080 Super 16GB.jpg" },
-    { id: 8,  name: "Laptop Lenovo ThinkPad X1 Carbon",       category: "laptop",      price: 42000000,  oldPrice: 46000000,  badge: null,   specs: "i7-1365U | 32GB | 1TB | 14\" 2.8K OLED",          catLabel: "Laptop",             img: "../images/Laptop_Lenovo_ThinkPad X1_Carbon.webp" },
-    { id: 9,  name: "PC Gaming Ryzen 9 RTX 4080",             category: "gaming",      price: 68000000,  oldPrice: 72000000,  badge: "HOT",  specs: "R9 7900X | RTX 4080 | 32GB DDR5 | 1TB",           catLabel: "PC",             img: "../images/pc_gaming_ryzen_9_rtx_4080.jpg" },
-    { id: 10, name: "Màn hình ASUS ROG Swift 32\" 4K 240Hz",  category: "phu-kien",    price: 22000000,  oldPrice: 25000000,  badge: "SALE", specs: "32\" IPS | 4K | 240Hz | HDR1000 | G-Sync",         catLabel: "MH",             img: "../images/Man_hinh_ASUSROG_Swift 32.png" },
-    { id: 11, name: "Bàn phím cơ Keychron Q5 Pro",            category: "phu-kien",    price: 4200000,   oldPrice: null,      badge: "NEW",  specs: "96% | QMK/VIA | Gasket mount | RGB",               catLabel: "KB",             img: "../images/Keychron_Q5_Pro.webp" },
-    { id: 12, name: "Laptop Dell XPS 15 OLED 2025",           category: "laptop",      price: 65000000,  oldPrice: 70000000,  badge: null,   specs: "i9-14900H | RTX 4070 | 64GB | 2TB | OLED",         catLabel: "Laptop",             img: "../images/LaptopDell_XPS15OLED 2025.jpg" },
-    { id: 13, name: "SSD Samsung 990 Pro 4TB NVMe",           category: "linh-kien",   price: 5800000,   oldPrice: 6500000,   badge: "SALE", specs: "PCIe 4.0 | 7450MB/s Read | M.2 2280",             catLabel: "SSD",             img: "../images/SSD_Samsung_990_Pro_4TB_NVMe.jpg" },
-    { id: 14, name: "RAM Corsair Dominator 64GB DDR5 6400",   category: "linh-kien",   price: 8200000,   oldPrice: null,      badge: null,   specs: "2x32GB | DDR5-6400 | CL32 | RGB",                  catLabel: "RAM",             img: "../images/RAM_Corsair_Dominator_64GB_DDR5_6400.jpg" },
-    { id: 15, name: "Chuột Logitech G Pro X Superlight 2",    category: "phu-kien",    price: 2800000,   oldPrice: 3200000,   badge: "HOT",  specs: "32000 DPI | 95g | 300h pin | 2.4GHz",              catLabel: "Mouse",             img: "../images/Chuot_Logitech_G_Pro_X_Superlight_2.jpg" },
-    { id: 16, name: "Workstation HP Z6 G5 Dual Xeon",         category: "workstation", price: 185000000, oldPrice: null,      badge: "NEW",  specs: "2x Xeon Gold | 256GB ECC | RTX A5000",             catLabel: "WS",             img: "../images/Workstation_HP_Z6_G5_Dual_Xeon.jpg" },
+    { id: 1,  name: "PC Gaming Beast i9 RTX 4090",          category: "gaming",      price: 89000000,  oldPrice: 99000000,  badge: "HOT",  specs: "i9-14900K | RTX 4090 | 64GB RAM | 2TB SSD",      catLabel: "PC",             img: "./assets/images/PC_Gaming_Beast.jpg" },
+    { id: 2,  name: "Laptop ASUS ROG Zephyrus G16",          category: "gaming",      price: 52000000,  oldPrice: 58000000,  badge: "SALE", specs: "Ryzen 9 | RTX 4070 | 32GB | 1TB",                  catLabel: "Laptop",             img: "./assets/images/Laptop_ASUS_ROG_Zephyrus_G16.webp" },
+    { id: 3,  name: "Workstation Dell Precision 7680",        category: "workstation", price: 120000000, oldPrice: null,      badge: "NEW",  specs: "Xeon W | RTX A4000 | 128GB ECC | 4TB",             catLabel: "WS",             img: "./assets/images/Workstation_Dell_Precision_7680.webp" },
+    { id: 4,  name: "MacBook Pro M3 Max 16",               category: "laptop",      price: 99000000,  oldPrice: 105000000, badge: "SALE", specs: "M3 Max | 48GB | 1TB SSD | Liquid Retina XDR",      catLabel: "Laptop",             img: "./assets/images/MacBook Pro_M3_Max_16.jpeg" },
+    { id: 5,  name: "PC Văn phòng Core i5 Gen 13",           category: "van-phong",   price: 18500000,  oldPrice: null,      badge: null,   specs: "i5-13400 | UHD 730 | 16GB | 512GB SSD",            catLabel: "PC",             img: "./assets/images/pcvan-phong-i3.jpg" },
+    { id: 6,  name: "Intel Core i9-14900K Processor",         category: "linh-kien",   price: 13500000,  oldPrice: 15000000,  badge: "SALE", specs: "24 nhân 32 luồng | 6.0GHz Turbo | LGA170₀",        catLabel: "CPU",             img: "./assets/images/Intel_Core i9-14900K_Processor.jpg" },
+    { id: 7,  name: "NVIDIA RTX 4080 Super 16GB",             category: "linh-kien",   price: 28000000,  oldPrice: null,      badge: "NEW",  specs: "16GB GDDR6X | DLSS 3 | Ray Tracing",               catLabel: "GPU",             img: "./assets/images/NVIDIA_RTX_4080.png" },
+    { id: 8,  name: "Laptop Lenovo ThinkPad X1 Carbon",       category: "laptop",      price: 42000000,  oldPrice: 46000000,  badge: null,   specs: "i7-1365U | 32GB | 1TB | 14\" 2.8K OLED",          catLabel: "Laptop",             img: "./assets/images/Laptop_Lenovo_ThinkPad X1_Carbon.webp" },
+    { id: 9,  name: "PC Gaming Ryzen 9 RTX 4080",             category: "gaming",      price: 68000000,  oldPrice: 72000000,  badge: "HOT",  specs: "R9 7900X | RTX 4080 | 32GB DDR5 | 1TB",           catLabel: "PC",             img: "./assets/images/PCGaming_Ryzen9_RTX-4080.jpg" },
+    { id: 10, name: "Màn hình ASUS ROG Swift 32\" 4K 240Hz",  category: "phu-kien",    price: 22000000,  oldPrice: 25000000,  badge: "SALE", specs: "32\" IPS | 4K | 240Hz | HDR1000 | G-Sync",         catLabel: "MH",             img: "./assets/images/Man_hinh_ASUSROG_Swift 32.png" },
+    { id: 11, name: "Bàn phím cơ Keychron Q5 Pro",            category: "phu-kien",    price: 4200000,   oldPrice: null,      badge: "NEW",  specs: "96% | QMK/VIA | Gasket mount | RGB",               catLabel: "KB",             img: "./assets/images/Keychron_Q5_Pro.webp" },
+    { id: 12, name: "Laptop Dell XPS 15 OLED 2025",           category: "laptop",      price: 65000000,  oldPrice: 70000000,  badge: null,   specs: "i9-14900H | RTX 4070 | 64GB | 2TB | OLED",         catLabel: "Laptop",             img: "./assets/images/LaptopDell_XPS15OLED 2025.jpg" },
+    { id: 13, name: "SSD Samsung 990 Pro 4TB NVMe",           category: "linh-kien",   price: 5800000,   oldPrice: 6500000,   badge: "SALE", specs: "PCIe 4.0 | 7450MB/s Read | M.2 2280",             catLabel: "SSD",             img: "./assets/images/SSD_Samsung990_Pro4TB.png" },
+    { id: 14, name: "RAM Corsair Dominator 64GB DDR5 6400",   category: "linh-kien",   price: 8200000,   oldPrice: null,      badge: null,   specs: "2x32GB | DDR5-6400 | CL32 | RGB",                  catLabel: "RAM",             img: "./assets/images/Corsair_Dominator64GB.jpg" },
+    { id: 15, name: "Chuột Logitech G Pro X Superlight 2",    category: "phu-kien",    price: 2800000,   oldPrice: 3200000,   badge: "HOT",  specs: "32000 DPI | 95g | 300h pin | 2.4GHz",              catLabel: "Mouse",             img: "./assets/images/Logitech_GProX_Superlight2.jpg" },
+    { id: 16, name: "Workstation HP Z6 G5 Dual Xeon",         category: "workstation", price: 185000000, oldPrice: null,      badge: "NEW",  specs: "2x Xeon Gold | 256GB ECC | RTX A5000",             catLabel: "WS",             img: "./assets/images/Workstation_HPZ6G5_DualXeon.jpg" },
 ];
 
 const ITEMS_PER_PAGE = 8;
@@ -83,7 +83,7 @@ function buyNow(id) {
 function filterProducts(cat) {
     currentCategory = cat;
     currentPage = 1;
-    filterAndRender();
+    doSearch();
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -92,7 +92,8 @@ function resetFilter() {
     currentPage = 1;
     document.getElementById('searchInput').value = '';
     document.getElementById('sortSelect').value = 'mac-dinh';
-    filterAndRender();
+    filteredProducts = [...products];
+    renderProducts();
 }
 
 function filterAndRender() {
@@ -112,6 +113,10 @@ function filterAndRender() {
     renderProducts();
 }
 
+function doSearch() {
+    filterAndRender();
+}
+
 function getCatLabel(cat) {
     const labels = {
         gaming: 'PC Gaming', laptop: 'Laptop', workstation: 'Workstation',
@@ -126,13 +131,13 @@ function renderProducts() {
     const paged = filteredProducts.slice(start, start + ITEMS_PER_PAGE);
     const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
-    document.getElementById('countBadge').textContent = `Hien thi ${filteredProducts.length} san pham`;
+    document.getElementById('countBadge').textContent = `Hiển thị ${filteredProducts.length} sản phẩm`;
     document.getElementById('pageInfo').textContent = `Trang ${currentPage} / ${totalPages || 1}`;
     document.getElementById('prevBtn').disabled = currentPage <= 1;
     document.getElementById('nextBtn').disabled = currentPage >= totalPages;
 
     if (paged.length === 0) {
-        grid.innerHTML = `<div class="empty-state">Khong tim thay san pham phu hop</div>`;
+        grid.innerHTML = `<div class="empty-state">Không tìm thấy sản phẩm phù hợp</div>`;
         return;
     }
 
@@ -140,7 +145,11 @@ function renderProducts() {
         <div class="product-card">
             ${p.badge ? `<span class="product-badge badge-${p.badge.toLowerCase()}">${p.badge}</span>` : ''}
             <div class="product-img">
-                <span class="product-img-label">${p.catLabel}</span>
+                ${p.img
+                    ? `<img src="${p.img}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                       <span class="product-img-label" style="display:none">${p.catLabel}</span>`
+                    : `<span class="product-img-label">${p.catLabel}</span>`
+                }
             </div>
             <div class="product-info">
                 <span class="product-cat">${getCatLabel(p.category)}</span>
@@ -152,7 +161,7 @@ function renderProducts() {
                     ${p.oldPrice ? `<span class="product-discount">-${Math.round((1 - p.price / p.oldPrice) * 100)}%</span>` : ''}
                 </div>
                 <div class="product-actions">
-                    <button class="btn-cart" onclick="addToCart(${p.id})">Them gio</button>
+                    <button class="btn-cart" onclick="addToCart(${p.id})">Thêm giỏ</button>
                     <button class="btn-buy" onclick="buyNow(${p.id})">Mua ngay</button>
                 </div>
             </div>
