@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gio hang - TechCore</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <title>Giỏ hàng - QuangStore</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      />
+    <link rel="stylesheet" href="./asset/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
 </head>
 <body>
 
@@ -17,11 +22,9 @@
     <div class="header-inner">
         <a href="index.html" class="logo">
             <div class="logo-mark">
-                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
-                </svg>
+                <img src="./assets/images/logo2.avif" alt="Logo">
             </div>
-            <span class="logo-text">TechCore</span>
+            <span class="logo-text">QuangStore</span>
         </a>
         <nav class="nav">
             <a href="index.html" class="nav-link">Trang chủ</a>
@@ -31,14 +34,10 @@
         </nav>
         <div class="header-actions">
             <a href="cart.html" class="cart-btn" style="border-color: var(--accent);" title="Giỏ hàng">
-                <svg class="cart-icon-svg" viewBox="0 0 24 24">
-                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <path d="M16 10a4 4 0 01-8 0"/>
-                </svg>
+                <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-count" id="cartCount">0</span>
             </a>
-            <button class="btn-login" onclick="window.location.href='login.html'">Dang nhap</button>
+            <button class="btn-login" onclick="window.location.href='login.html'">Đăng nhập</button>
         </div>
     </div>
 </header>
@@ -46,40 +45,40 @@
 <!-- Cart Section -->
 <section class="cart-page-section">
     <div class="container">
-        <div class="section-tag">// GIO HANG</div>
-        <h1 class="page-title">Gio hang cua ban</h1>
-        <p class="page-subtitle">Ban co <span id="totalItems">0</span> san pham trong gio hang</p>
+        <div class="section-tag">GIỎ HÀNG</div>
+        <h1 class="page-title">Giỏ hàng của bạn</h1>
+        <p class="page-subtitle">Bạn có <span id="totalItems">0</span> sản phẩm trong giỏ hàng</p>
 
         <div class="cart-layout" id="cartLayout">
             <!-- Cart Items -->
             <div>
                 <div class="cart-items-box" id="cartItemsBox">
-                    <div class="cart-items-header">// DANH SACH SAN PHAM</div>
+                    <div class="cart-items-header">Danh sách sản phẩm</div>
                     <div id="cartItemsList"></div>
                     <div class="cart-footer-actions">
-                        <a href="index.html" class="btn-continue">&#8592; Tiep tuc mua sam</a>
-                        <button class="btn-clear" onclick="clearCart()">Xoa tat ca</button>
+                        <a href="index.html" class="btn-continue">&#8592; Tiếp tục mua sắm</a>
+                        <button class="btn-clear" onclick="clearCart()">Xóa tất cả</button>
                     </div>
                 </div>
             </div>
 
             <!-- Order Summary -->
             <div class="order-summary-box">
-                <h3>Tom tat don hang</h3>
+                <h3>Tóm tắt đơn hàng</h3>
                 <div class="summary-row">
-                    <span>Tam tinh</span>
+                    <span>Tạm tính</span>
                     <span id="subtotal">0d</span>
                 </div>
                 <div class="summary-row">
-                    <span>Phi van chuyen</span>
+                    <span>Phí vận chuyển</span>
                     <span id="shipping">30.000d</span>
                 </div>
                 <div class="summary-row">
-                    <span>Giam gia</span>
+                    <span>Giảm giá</span>
                     <span style="color: var(--success)">-0d</span>
                 </div>
                 <div class="summary-row total">
-                    <span>Tong cong</span>
+                    <span>Tổng cộng</span>
                     <span id="totalPrice">0d</span>
                 </div>
 
@@ -87,27 +86,26 @@
                     Thanh toan ngay
                 </button>
 
-                <p class="payment-label">Chap nhan thanh toan</p>
+                <p class="payment-label">Chấp nhận thanh toán</p>
                 <div class="payment-icons-row">
-                    <span>VISA</span>
-                    <span>Mastercard</span>
-                    <span>COD</span>
-                    <span>MoMo</span>
-                    <span>VNPay</span>
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
                 </div>
 
                 <div class="trust-grid" style="margin-top:20px;">
                     <div class="trust-item">
-                        <span class="trust-icon-label">SSL</span>
-                        <span>Bao mat thanh toan</span>
+                        <span class="trust-icon-label"><i class="fa-solid fa-shield-halved"></i></span>
+                        <span>Bảo mật thanh toán</span>
                     </div>
                     <div class="trust-item">
-                        <span class="trust-icon-label">Fast</span>
-                        <span>Giao hang nhanh</span>
+                        <span class="trust-icon-label"><i class="fa-solid fa-bolt"></i></span>
+                        <span>Giao hàng nhanh</span>
                     </div>
                     <div class="trust-item">
-                        <span class="trust-icon-label">7D</span>
-                        <span>Doi tra 7 ngay</span>
+                        <span class="trust-icon-label"><i class="fa-solid fa-undo"></i></span>
+                        <span>Đổi trả 7 ngày</span>
                     </div>
                 </div>
             </div>
@@ -122,43 +120,41 @@
             <div class="footer-brand">
                 <a href="index.html" class="logo" style="margin-bottom:16px; display:inline-flex;">
                     <div class="logo-mark">
-                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
-                        </svg>
+                        <img src="./assets/images/logo2.avif" alt="Logo">
                     </div>
-                    <span class="logo-text">TechCore</span>
+                    <span class="logo-text">QuangStore</span>
                 </a>
-                <p>Dia chi may tinh tin cay cua nguoi Viet. Chuyen cung cap PC, laptop va linh kien may tinh chinh hang tu 2015.</p>
+                <p>Địa chỉ máy tính tin cậy của người Việt. Chuyên cung cấp PC, laptop và linh kiện máy tính chính hãng từ 2015.</p>
                 <div class="footer-social">
-                    <a href="#">Facebook</a>
-                    <a href="#">Zalo</a>
-                    <a href="#">YouTube</a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
                 </div>
             </div>
             <div class="footer-links">
-                <h4>San pham</h4>
-                <a href="index.html#category">PC Gaming</a>
-                <a href="index.html#category">Laptop</a>
-                <a href="index.html#category">Workstation</a>
-                <a href="index.html#category">Linh kien</a>
+                <h4><i class="fa-solid fa-computer"></i>Sản phẩm</h4>
+                <a href="#category">PC Gaming</a>
+                <a href="#category">Laptop</a>
+                <a href="#category">Linh kiện</a>
+                <a href="#category">Phụ kiện</a>
             </div>
             <div class="footer-links">
-                <h4>Ho tro</h4>
-                <a href="#">Chinh sach bao hanh</a>
-                <a href="#">Huong dan mua hang</a>
-                <a href="#">Chinh sach doi tra</a>
-                <a href="#">Tra cuu don hang</a>
+                <h4><i class="fa-solid fa-headset"></i>Hỗ trợ</h4>
+                <a href="#">Chính sách bảo hành</a>
+                <a href="#">Hướng dẫn mua hàng</a>
+                <a href="#">Chính sách đổi trả</a>
+                <a href="#">Tra cứu đơn hàng</a>
             </div>
             <div class="footer-contact">
-                <h4>Lien he</h4>
-                <p>Email: support@techcore.vn</p>
-                <p>Hotline: 1800 6868</p>
-                <p>123 Nguyen Van Linh, Q7, TP.HCM</p>
-                <p>08:00 – 22:00 (Tat ca cac ngay)</p>
+                <h4><i class="fa-regular fa-headphones"></i>Liên hệ</h4>
+                <p><i class="fa-solid fa-envelope"></i>Email: support@QuangStore.vn</p>
+                <p><i class="fa-solid fa-phone"></i>Hotline: 1800 6868</p>
+                <p><i class="fa-solid fa-map-marker-alt"></i>123 Nguyễn Văn Linh, Q7, TP.HCM</p>
+                <p><i class="fa-solid fa-clock"></i>08:00 – 22:00 (Tất cả các ngày)</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 TechCore. All rights reserved.</p>
+            <p>© 2025 QuangStore. All rights reserved.</p>
         </div>
     </div>
 </footer>

@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechCore - Máy Tính Chuyên Nghiệp</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>QuangStore - Máy Tính Chuyên Nghiệp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      />
+    <link rel="stylesheet" href="./asset/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
 </head>
 <body>
 
@@ -16,11 +21,9 @@
     <div class="header-inner">
         <a href="index.html" class="logo">
             <div class="logo-mark">
-                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
-                </svg>
+                <img src="./assets/images/logo2.avif" alt="QuangStore Logo">
             </div>
-            <span class="logo-text">TechCore</span>
+            <span class="logo-text">QuangStore</span>
         </a>
         <nav class="nav">
             <a href="index.html" class="nav-link">Trang chủ</a>
@@ -30,11 +33,7 @@
         </nav>
         <div class="header-actions">
             <a href="cart.html" class="cart-btn" title="Gio hang">
-                <svg class="cart-icon-svg" viewBox="0 0 24 24">
-                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <path d="M16 10a4 4 0 01-8 0"/>
-                </svg>
+                <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-count" id="cartCount">0</span>
             </a>
             <button class="btn-login" onclick="window.location.href='login.html'">Đăng nhập</button>
@@ -53,11 +52,11 @@
             Công nghệ đỉnh cao 2026
         </div>
         <h1 class="hero-title">
-            Máy tinh<br>
+            Máy tính<br>
             <span class="title-accent">hiệu suất cao</span><br>
             cho mọi nhu cầu
         </h1>
-        <p class="hero-desc">Từ gaming đến workstation, từ laptop đến PC — TechCore mang đến giải pháp máy tính toàn diện với linh kiện chính hãng, bảo hành chu đáo.</p>
+        <p class="hero-desc">Từ gaming đến workstation, từ laptop đến PC — QuangStore mang đến giải pháp máy tính toàn diện với linh kiện chính hãng, bảo hành chu đáo.</p>
         <div class="hero-actions">
             <a href="#products" class="btn-primary">Khám phá ngay</a>
             <a href="#category" class="btn-ghost">Xem danh mục</a>
@@ -111,7 +110,7 @@
         </div>
         <div class="category-grid">
             <div class="cat-card" onclick="filterProducts('gaming')">
-                <div class="cat-label-icon">Game</div>
+                <div class="cat-label-icon"><img src="./assets/images/Pc_gaming.webp" alt=""></div>
                 <div class="cat-info">
                     <h3>PC Gaming</h3>
                     <p>Hiệu suất tối đa cho game thủ</p>
@@ -120,7 +119,7 @@
                 <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('laptop')">
-                <div class="cat-label-icon">Laptop</div>
+                <div class="cat-label-icon"><img src="./assets/images/laptop.avif" alt=""></div>
                 <div class="cat-info">
                     <h3>Laptop</h3>
                     <p>Mỏng nhẹ, pin trâu, hiệu suất cao</p>
@@ -138,7 +137,7 @@
                 <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('linh-kien')">
-                <div class="cat-label-icon">Parts</div>
+                <div class="cat-label-icon"><img src="./assets/images/lk.jpg" alt=""></div>
                 <div class="cat-info">
                     <h3>Linh kiện</h3>
                     <p>CPU, GPU, RAM, SSD chính hãng</p>
@@ -147,7 +146,7 @@
                 <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('phu-kien')">
-                <div class="cat-label-icon">Acc</div>
+                <div class="cat-label-icon"><img src="./assets/images/Phu_kien.png" alt=""></div>
                 <div class="cat-info">
                     <h3>Phụ kiện</h3>
                     <p>Bàn phím, chuột, màn hình, tai nghe</p>
@@ -156,7 +155,7 @@
                 <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('van-phong')">
-                <div class="cat-label-icon">Office</div>
+                <div class="cat-label-icon"><img src="./assets/images/pcvan-phong-i3.jpg" alt=""></div>
                 <div class="cat-info">
                     <h3> Văn phòng</h3>
                     <p>PC &amp; Laptop cho công việc hàng ngày</p>
@@ -181,7 +180,7 @@
                 <option value="tu-thap-den-cao">Giá: Thấp đến Cao</option>
                 <option value="tu-cao-den-thap">Giá: Cao đến Thấp</option>
             </select>
-            <button class="btn-reset" onclick="resetFilter()">Đặt lại</button>
+            <button class="btn-reset" onclick="resetFilter()">Đặt lại</button> // chinh thanh nut tim kiem
         </div>
     </div>
 </section>
@@ -230,26 +229,26 @@
     <div class="container">
         <div class="section-header">
             <span class="section-tag">VÌ SAO CHỌN CHÚNG TÔI</span>
-            <h2 class="section-title">Cam kết của TechCore</h2>
+            <h2 class="section-title">Cam kết của QuangStore</h2>
         </div>
         <div class="why-grid">
             <div class="why-card">
-                <span class="why-icon-label">Chính hãng</span>
+                <span class="why-icon-label"><img src="https://cdn.haluta.vn/media/core/icons/san-pham-chat-luong.svg" alt="Logo">Chính hãng</span>
                 <h3>Hàng chính hãng 100%</h3>
                 <p>Tất cả sản phẩm đều có tem chính hãng, hóa đơn VAT đầy đủ, nguồn gốc rõ ràng.</p>
             </div>
             <div class="why-card">
-                <span class="why-icon-label">Vận chuyển</span>
+                <span class="why-icon-label"><img src="https://cdn.haluta.vn/media/core/icons/giao-hang-toan-quoc.svg" alt="Logo">Vận chuyển</span>
                 <h3>Giao hàng toàn quốc</h3>
                 <p>Miễn phí vận chuyển cho đơn hàng trên 5 triệu. Giao trong 24h nội thành.</p>
             </div>
             <div class="why-card">
-                <span class="why-icon-label">Bảo hành</span>
+                <span class="why-icon-label"><img src="https://cdn.haluta.vn/media/core/icons/mien-phi-bao-hanh.svg" alt="Logo">Bảo hành</span>
                 <h3>Bảo hành tận nơi</h3>
                 <p>Bảo hành chính hãng 12-36 tháng. Hỗ trợ kỹ thuật 24/7 qua hotline.</p>
             </div>
             <div class="why-card">
-                <span class="why-icon-label">Trả góp</span>
+                <span class="why-icon-label"><img src="https://cdn.haluta.vn/media/core/icons/dich-vu-chuyen-nghiep.svg" alt="Logo">Trả góp</span>
                 <h3>Trả góp 0% lãi suất</h3>
                 <p>Hỗ trợ trả góp 0% qua thẻ tín dụng các ngân hàng lớn, tối đa 24 tháng.</p>
             </div>
@@ -264,49 +263,63 @@
             <div class="footer-brand">
                 <a href="index.html" class="logo" style="margin-bottom:16px; display:inline-flex;">
                     <div class="logo-mark">
-                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="9,1 17,5 17,13 9,17 1,13 1,5" fill="currentColor"/>
-                        </svg>
+                        <img src="./assets/images/logo2.avif" alt="Logo">
                     </div>
-                    <span class="logo-text">TechCore</span>
+                    <span class="logo-text">QuangStore</span>
                 </a>
                 <p>Địa chỉ máy tính tin cậy của người Việt. Chuyên cung cấp PC, laptop và linh kiện máy tính chính hãng từ 2015.</p>
                 <div class="footer-social">
-                    <a href="#">Facebook</a>
-                    <a href="#">Zalo</a>
-                    <a href="#">YouTube</a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
                 </div>
             </div>
             <div class="footer-links">
-                <h4>Sản phẩm</h4>
+                <h4><i class="fa-solid fa-computer"></i>Sản phẩm</h4>
                 <a href="#category">PC Gaming</a>
                 <a href="#category">Laptop</a>
                 <a href="#category">Linh kiện</a>
                 <a href="#category">Phụ kiện</a>
             </div>
             <div class="footer-links">
-                <h4>Hỗ trợ</h4>
+                <h4><i class="fa-solid fa-headset"></i>Hỗ trợ</h4>
                 <a href="#">Chính sách bảo hành</a>
                 <a href="#">Hướng dẫn mua hàng</a>
                 <a href="#">Chính sách đổi trả</a>
                 <a href="#">Tra cứu đơn hàng</a>
             </div>
             <div class="footer-contact">
-                <h4>Liên hệ</h4>
-                <p>Email: support@techcore.vn</p>
-                <p>Hotline: 1800 6868</p>
-                <p>123 Nguyễn Văn Linh, Q7, TP.HCM</p>
-                <p>08:00 – 22:00 (Tất cả các ngày)</p>
+                <h4><i class="fa-regular fa-headphones"></i>Liên hệ</h4>
+                <p><i class="fa-solid fa-envelope"></i>Email: support@QuangStore.vn</p>
+                <p><i class="fa-solid fa-phone"></i>Hotline: 1800 6868</p>
+                <p><i class="fa-solid fa-map-marker-alt"></i>123 Nguyễn Văn Linh, Q7, TP.HCM</p>
+                <p><i class="fa-solid fa-clock"></i>08:00 – 22:00 (Tất cả các ngày)</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 TechCore. All rights reserved.</p>
+            <p>© 2025 QuangStore. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <div id="toast" class="toast"></div>
 
-<script src="./JS/main.js"></script>
+<script src="./assets/js/main.js"></script>
+<script
+       type="text/javascript"
+       src="https://code.jquery.com/jquery-1.11.0.min.js"
+     ></script>
+     <script
+       type="text/javascript"
+       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+     ></script>
+     <script
+       type="text/javascript"
+       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+     ></script>
+
+    <!-- <script src="assets/Bootstrap/jquery.slim.min.js"></script> -->
+    <script src="asset/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./asset/Js/slider.js"></script>
 </body>
 </html>
