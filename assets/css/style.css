@@ -897,6 +897,7 @@
     width: 20px;
     height: 20px;
     object-fit: contain;
+    color: #fff;
     filter: invert(1) sepia(1) saturate(3) hue-rotate(170deg);
 }
 .why-card h3 {

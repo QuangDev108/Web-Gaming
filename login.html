@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập - QuangStore</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         rel="stylesheet"
         type="text/css"
@@ -21,13 +21,15 @@
 <header class="login-header">
     <div class="container">
         <div class="header-inner">
-        <a href="index.html" class="logo">
-            <div class="logo-mark">
-                <img src="./assets/images/logo2.avif" alt="QuangStore Logo">
-            </div>
-            <span class="logo-text">QuangStore</span>
-        </a>
-            <a href="index.html" class="btn-back"><i class="fa-regular fa-house"></i> Về trang chủ</a>
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <img src="./assets/images/logo2.avif" alt="QuangStore Logo">
+                </div>
+                <span class="logo-text">QuangStore</span>
+            </a>
+            <a href="index.html" class="btn-back">
+                <i class="fa-regular fa-house"></i> Về trang chủ
+            </a>
         </div>
     </div>
 </header>
@@ -71,25 +73,58 @@
 
             <div id="alertBox" class="alert"></div>
 
+            <!-- Username -->
             <div class="form-group">
                 <label>Tên đăng nhập <span>*</span></label>
-                <input type="text" id="username" class="form-input" placeholder="Nhập tên đăng nhập" autocomplete="username">
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="username" class="form-input" placeholder="Nhập tên đăng nhập" autocomplete="username">
+                </div>
             </div>
 
+            <!-- Password -->
             <div class="form-group">
                 <label>Mật khẩu <span>*</span></label>
-                <input type="password" id="password" class="form-input" placeholder="Nhập mật khẩu" autocomplete="current-password">
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-lock input-icon"></i>
+                    <input type="password" id="password" class="form-input" placeholder="Nhập mật khẩu" autocomplete="current-password">
+                </div>
+            </div>
+
+            <!-- Forgot password & Register -->
+            <div class="form-meta">
+                <a href="forgot-password.html" class="form-link">
+                    <i class="fa-regular fa-circle-question"></i> Quên mật khẩu?
+                </a>
+                <span class="form-divider">|</span>
+                <a href="register.html" class="form-link">
+                    Tạo tài khoản mới
+                </a>
             </div>
 
             <button class="btn-submit" id="btnSubmit" onclick="handleLogin()">
-                Đăng nhập
+                <i class="fa-solid fa-right-to-bracket"></i> Đăng nhập
             </button>
 
-            <div class="demo-box" onclick="fillDemo('admin')">
-                <h4>// TÀI KHOẢN DEMO</h4>
-                <p>Admin: <code>admin</code> / <code>admin123</code></p>
-                <p>User: &nbsp;<code>user</code> / <code>user123</code></p>
-                <p class="hint">Click để điền tự động</p>
+            <!-- Demo accounts -->
+            <div class="demo-box">
+                <h4>// Tài khoản demo</h4>
+                <div class="demo-accounts">
+                    <button class="demo-btn" onclick="fillDemo('admin')">
+                        <div class="demo-btn-info">
+                            <span class="demo-btn-role"><i class="fa-solid fa-shield-halved"></i> Admin</span>
+                            <span class="demo-btn-creds"><code>admin</code> / <code>admin123</code></span>
+                        </div>
+                        <span class="demo-btn-action"><i class="fa-regular fa-pen-to-square"></i> Dùng tài khoản này</span>
+                    </button>
+                    <button class="demo-btn" onclick="fillDemo('user')">
+                        <div class="demo-btn-info">
+                            <span class="demo-btn-role"><i class="fa-regular fa-user"></i> User</span>
+                            <span class="demo-btn-creds"><code>user</code> / <code>user123</code></span>
+                        </div>
+                        <span class="demo-btn-action"><i class="fa-regular fa-pen-to-square"></i> Dùng tài khoản này</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -97,6 +132,6 @@
 
 <div id="toast" class="toast"></div>
 
-<script src="./JS/login.js"></script>
+<script src="./assets/JS/login.js"></script>
 </body>
 </html>

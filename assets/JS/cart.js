@@ -29,6 +29,17 @@ function updateHeaderCart() {
     el.style.display = total > 0 ? 'flex' : 'none';
 }
 
+// ====== RENDER THUMBNAIL ======
+// Hỗ trợ: item.image (URL ảnh), item.catLabel (text fallback)
+function renderThumb(item) {
+    if (item.image) {
+        return `<img src="${item.image}" alt="${item.name}"
+                    style="width:100%;height:100%;object-fit:cover;border-radius:9px;"
+                    onerror="this.parentElement.innerHTML='<span>${item.catLabel || 'SP'}</span>'">`;
+    }
+    return `<span>${item.catLabel || 'SP'}</span>`;
+}
+
 // ====== RENDER CART ======
 function renderCart() {
     const cart = getCart();
@@ -44,10 +55,9 @@ function renderCart() {
     if (cart.length === 0) {
         list.innerHTML = `
             <div class="empty-cart">
-                <span class="empty-cart-label">// TRONG</span>
-                <h3>Gio hang trong</h3>
-                <p>Hay them san pham vao gio hang de tiep tuc mua sam</p>
-                <a href="index.html" class="btn-primary">Kham pha san pham</a>
+                <h3>Giỏ hàng trống</h3>
+                <p>Hãy thêm sản phẩm vào giỏ hàng để tiếp tục mua sắm</p>
+                <a href="index.html" class="btn-primary">Khám phá sản phẩm</a>
             </div>
         `;
         subtotalEl.textContent = '0d';
@@ -61,13 +71,13 @@ function renderCart() {
     const total    = subtotal + shipping;
 
     subtotalEl.textContent = formatPrice(subtotal);
-    shippingEl.textContent = shipping === 0 ? 'Mien phi' : formatPrice(shipping);
+    shippingEl.textContent = shipping === 0 ? 'Miễn phí' : formatPrice(shipping);
     totalEl.textContent    = formatPrice(total);
 
     list.innerHTML = cart.map(item => `
         <div class="cart-item-row" id="item-${item.id}">
             <div class="cart-item-thumb">
-                <span>${item.catLabel || 'SP'}</span>
+                ${renderThumb(item)}
             </div>
             <div class="cart-item-details">
                 <div class="cart-item-name">${item.name}</div>
@@ -82,7 +92,7 @@ function renderCart() {
             </div>
             <div class="cart-item-total-col">
                 <div class="cart-item-total">${formatPrice(item.price * item.qty)}</div>
-                <button class="btn-remove" onclick="removeItem(${item.id})" title="Xoa">&#215;</button>
+                <button class="btn-remove" onclick="removeItem(${item.id})" title="Xóa">Xóa</button>
             </div>
         </div>
     `).join('');
@@ -108,23 +118,23 @@ function setQty(id, val) {
 function removeItem(id) {
     const cart = getCart().filter(i => i.id !== id);
     saveCart(cart);
-    showToast('Da xoa san pham khoi gio hang');
+    showToast('Đã xóa sản phẩm khỏi giỏ hàng');
 }
 
 function clearCart() {
-    if (confirm('Ban co chac muon xoa toan bo gio hang?')) {
+    if (confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng?')) {
         saveCart([]);
-        showToast('Da xoa tat ca san pham');
+        showToast('Đã xóa tất cả sản phẩm');
     }
 }
 
 function checkout() {
     const cart = getCart();
     if (cart.length === 0) {
-        showToast('Gio hang dang trong!');
+        showToast('Giỏ hàng đang trống!');
         return;
     }
-    showToast('Dat hang thanh cong! Cam on ban da mua hang tai TechCore!');
+    showToast('Đặt hàng thành công! Cảm ơn bạn đã mua hàng tại QuangStore!');
     setTimeout(() => { saveCart([]); }, 2000);
 }
 

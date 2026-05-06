@@ -64,7 +64,7 @@
         <div class="hero-stats">
             <div class="stat">
                 <span class="stat-num">500+</span>
-                <span class="stat-label">ản phẩm</span>
+                <span class="stat-label">Sản phẩm</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
@@ -116,7 +116,6 @@
                     <p>Hiệu suất tối đa cho game thủ</p>
                     <span class="cat-count">48 sản phẩm</span>
                 </div>
-                <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('laptop')">
                 <div class="cat-label-icon"><img src="./assets/images/laptop.avif" alt=""></div>
@@ -125,7 +124,6 @@
                     <p>Mỏng nhẹ, pin trâu, hiệu suất cao</p>
                     <span class="cat-count">62 sản phẩm</span>
                 </div>
-                <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('workstation')">
                 <div class="cat-label-icon"><img src="./assets/images/Workstation_HPZ6G5_DualXeon.jpg" alt=""></div>
@@ -134,7 +132,6 @@
                     <p>Đồ họa, render, AI chuyên nghiệp</p>
                     <span class="cat-count">25 sản phẩm</span>
                 </div>
-                <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('linh-kien')">
                 <div class="cat-label-icon"><img src="./assets/images/lk.jpg" alt=""></div>
@@ -143,7 +140,6 @@
                     <p>CPU, GPU, RAM, SSD chính hãng</p>
                     <span class="cat-count">180 sản phẩm</span>
                 </div>
-                <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('phu-kien')">
                 <div class="cat-label-icon"><img src="./assets/images/Phu_kien.png" alt=""></div>
@@ -152,7 +148,6 @@
                     <p>Bàn phím, chuột, màn hình, tai nghe</p>
                     <span class="cat-count">95 sản phẩm</span>
                 </div>
-                <div class="cat-arrow">&#8594;</div>
             </div>
             <div class="cat-card" onclick="filterProducts('van-phong')">
                 <div class="cat-label-icon"><img src="./assets/images/pcvan-phong-i3.jpg" alt=""></div>
@@ -161,7 +156,6 @@
                     <p>PC &amp; Laptop cho công việc hàng ngày</p>
                     <span class="cat-count">37 sản phẩm</span>
                 </div>
-                <div class="cat-arrow">&#8594;</div>
             </div>
         </div>
     </div>
@@ -175,12 +169,13 @@
                 <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." onkeydown="if(event.key==='Enter') doSearch()">
             </div>
+            <button class="btn-search" onclick="doSearch()"> Tìm kiếm <i class="fa-solid fa-magnifying-glass"></i></button>
             <select id="sortSelect" onchange="filterAndRender()">
                 <option value="mac-dinh">Mặc định</option>
                 <option value="tu-thap-den-cao">Giá: Thấp đến Cao</option>
                 <option value="tu-cao-den-thap">Giá: Cao đến Thấp</option>
             </select>
-            <button class="btn-search" onclick="doSearch()"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+           
             <button class="btn-reset" onclick="resetFilter()">Đặt lại</button>
         </div>
     </div>
