@@ -67,7 +67,10 @@
     pointer-events: none;
 }
 
-.login-brand-inner { width: 100%; position: relative; z-index: 1; }
+.login-brand-inner { 
+    width: 100%; position: 
+    relative; z-index: 1; 
+}
 
 .login-brand-inner h1 {
     font-family: var(--font-display);

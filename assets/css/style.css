@@ -566,12 +566,7 @@
     flex-wrap: wrap;
 }
 .section-header .section-tag { margin-bottom: 0; }
-.product-count-badge {
-    margin-left: auto;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text3);
-}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -667,6 +662,7 @@
     line-height: 1.45;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -897,12 +893,11 @@
     width: 20px;
     height: 20px;
     object-fit: contain;
-    color: #fff;
-    filter: invert(1) sepia(1) saturate(3) hue-rotate(170deg);
+    filter: brightness(0) invert(1);
 }
 .why-card h3 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 8px;
@@ -951,7 +946,10 @@
     display: block;
 }
 
-.footer-social { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-social {
+    display: flex; gap: 10px;
+    flex-wrap: wrap;
+}
 .footer-social a {
     padding: 7px 15px;
     background: var(--surface);
@@ -962,7 +960,10 @@
     color: var(--text2);
     transition: var(--transition);
 }
-.footer-social a:hover { border-color: var(--accent); color: var(--accent); }
+.footer-social a:hover {
+    border-color: var(--accent); 
+    color: var(--accent); 
+}
 .footer-links h4, .footer-contact h4 {
     font-family: var(--font-display);
     font-size: 14px;
@@ -989,7 +990,10 @@
     transition: var(--transition);
     font-weight: 500;
 }
-.footer-links a:hover { color: var(--accent); padding-left: 6px; }
+.footer-links a:hover { 
+    color: var(--accent); 
+    padding-left: 6px; 
+}
 .footer-contact p {
     font-size: 13px;
     color: var(--text2);

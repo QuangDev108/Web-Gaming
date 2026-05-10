@@ -167,7 +167,7 @@ input, select, textarea {
     letter-spacing: -0.5px;
 }
 
-/* Toast */
+/* Toast: thong bao khi them vao gio hang */ 
 .toast {
     position: fixed;
     bottom: 30px;
