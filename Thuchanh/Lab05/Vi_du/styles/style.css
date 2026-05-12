@@ -1,0 +1,56 @@
+.menu_ngang{
+    display: flex;
+    background-color: aquamarine;
+    list-style: none;
+    min-height: 30px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.menu_ngang li{
+    line-height: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+    
+}
+
+.menu_ngang li a{
+    text-decoration: none;
+}
+
+.menu_ngang li a:hover{
+    color: red;
+}
+
+.menu_ngang li:hover{
+    background-color: yellow;
+}
+
+
+.menu_doc{
+    background-color: aquamarine;
+    list-style: none;
+    padding: 0;
+    width: 250px;
+}
+
+.menu_doc li{
+    line-height: 30px;
+    height: 40px;
+    border-bottom: solid;
+}
+
+.menu_doc li:hover{
+    background-color: aqua;
+}
+
+.menu_doc li a{
+    text-decoration: none;
+    font-style: italic;
+}
+
+.menu_doc li a:hover{
+    color: blue;
+}

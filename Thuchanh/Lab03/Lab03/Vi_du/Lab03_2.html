@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            background: #f5f5f5;
+            color: #333;
+            padding: 16px;
+        }
+
+        #container {
+            max-width: 560px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            color: #222;
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            color: #555;
+            margin: 14px 0 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .form-divider {
+            border: none;
+            border-top: 1px solid #e8e8e8;
+            margin: 10px 0;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .form-label {
+            width: 130px;
+            min-width: 130px;
+            font-size: 13px;
+            color: #444;
+        }
+
+        .form-control {
+            flex: 1;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            color: #333;
+            background: #fafafa;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #4a90d9;
+            background: #fff;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 6px 0;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px 12px;
+            padding: 6px 0;
+        }
+
+        .checkbox-grid label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            font-size: 12px;
+            padding: 4px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 24px;
+            background: #4a90d9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background: #357abd;
+        }
+
+        input[type="reset"] {
+            padding: 8px 24px;
+            background: #f0f0f0;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        input[type="reset"]:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form name="frmdangkithanhvien" action="xlThem.php" method="post" enctype="multipart/form-data">
+
+            <div class="form-title">ĐĂNG KÝ THÀNH VIÊN</div>
+
+            <div class="form-row">
+                <div class="form-label">Tên đăng nhập</div>
+                <div class="form-control"><input type="text" name="nmUsername" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Mật khẩu</div>
+                <div class="form-control"><input type="password" name="nmPassword" /></div>
+            </div>
+
+            <hr class="form-divider" />
+            <div class="section-title">THÔNG TIN CÁ NHÂN</div>
+
+            <div class="form-row">
+                <div class="form-label">Họ tên</div>
+                <div class="form-control"><input type="text" name="nmFullName" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Ngày sinh</div>
+                <div class="form-control"><input type="date" name="nmBirthDate" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Giới tính</div>
+                <div class="form-control">
+                    <div class="radio-group">
+                        <label><input type="radio" name="sex" value="nam" /> Nam</label>
+                        <label><input type="radio" name="sex" value="nu" /> Nữ</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Địa chỉ email</div>
+                <div class="form-control"><input type="email" name="nmEmailAdd" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Hình đại diện</div>
+                <div class="form-control"><input type="file" name="nmImage" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Địa chỉ</div>
+                <div class="form-control"><input type="text" name="nmAddress" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Điện thoại</div>
+                <div class="form-control"><input type="tel" name="nmCellphone" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Câu hỏi bí mật</div>
+                <div class="form-control">
+                    <select name="nmPriateQuestion">
+                        <option value="">Chọn câu hỏi bí mật</option>
+                        <option value="firstschool">Ngôi trường đầu tiên của bạn là gì</option>
+                        <option value="firstpet">Con vật đầu tiên mà bạn nuôi tên gì</option>
+                        <option value="childhoodmemory">Kỉ niệm thời thơ ấu của bạn là gì</option>
+                        <option value="hometown">Quê bạn ở đâu</option>
+                        <option value="hometown">Tên người bạn thân nhất của bạn là gì?</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Trả lời</div>
+                <div class="form-control"><input type="text" name="nmPrivateAnswer" /></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">Quan tâm đến</div>
+                <div class="form-control">
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="interest[]" value="vanHoc" /> Văn học</label>
+                        <label><input type="checkbox" name="interest[]" value="kinhTe" /> Kinh tế</label>
+                        <label><input type="checkbox" name="interest[]" value="tamLy" /> Tâm lý</label>
+                        <label><input type="checkbox" name="interest[]" value="thieuNhi" /> Thiếu nhi</label>
+                        <label><input type="checkbox" name="interest[]" value="giaoKhoa" /> Giáo khoa</label>
+                        <label><input type="checkbox" name="interest[]" value="ngoaiNgu" /> Ngoại ngữ</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <input type="submit" name="nmSubmit" value="Đăng ký" />
+                <input type="reset" name="nmReset" value="Xóa" />
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

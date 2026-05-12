@@ -1,0 +1,91 @@
+.wrapper {
+	display: flex;
+	/* kich hoat flex box*/
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+}
+
+.wrapper>* {
+	padding: 10px;
+	flex: 1 100%;
+	/* cho táº¥t cáº£ pháº§n tá»­ bĂªn trong cĂ³ Ä‘á»™ dĂ i 100% vĂ  tá»‰ lá»‡ chiáº¿m khĂ´ng gian trá»‘ng lĂ  nhÆ° nhau*/
+}
+
+.header-flex-2 {
+	background: tomato;
+	/* order: 0; */
+}
+
+.footer-flex-2 {
+	background: lightgreen;
+	order: 4;
+}
+
+.main {
+	text-align: left;
+	background: deepskyblue;
+	height: 400px;
+}
+
+/* 2 pháº§n aside sáº½ chá»‰ chiáº¿m 1 pháº§n khĂ´ng gian */
+.aside-1 {
+	background: gold;
+	height: auto;
+	order: 1;
+}
+
+.aside-2 {
+	background: hotpink;
+	height: auto; /* Äang px cá»‘ Ä‘á»‹nh - BĂ i 3 bá» hoáº·c cho Auto */
+	order: 3;
+}
+.img-res {
+	max-width: 100%;
+	height: auto;
+}
+@media only screen and (min-width: 900px) {
+	.main{
+		flex: 3;
+		/* cho pháº§n ná»™i dung main á»Ÿ giá»¯a chiáº¿m 3 pháº§n khĂ´ng gian trá»‘ng so vá»›i 2 pháº§n aside bĂªn cáº¡nh */
+		order: 2;
+		
+	}
+	.img-res {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.aside {
+		flex: 1; /* Cho aside (cha) chiáº¿m 1 pháº§n */
+	}
+	
+	/* Cho tá»«ng aside (con) chiáº¿m 1 pháº§n */
+	/* .aside-1 {
+		flex: 1;
+	}
+	.aside-2 {
+		flex: 1;
+	} */
+
+
+}
+
+@media screen and (max-width: 500px) {
+	.aside {
+		background-color: black;
+		color: aliceblue;
+		border-radius: 10px;
+		border: 1px solid lightseagreen;
+	}
+	.aside-1 {
+		flex: 1;
+	}
+	.aside-2 {
+		flex: 2;
+		font-size: 60px;
+	}
+	
+}
